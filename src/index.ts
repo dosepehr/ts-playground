@@ -1,7 +1,12 @@
-// literal types
+// sending null or undefined to functions
 
-type Metric = 'cm' | 'in';
+const greet = (name: string | null | undefined) => {
+    if (name) {
+        console.log(name.toLowerCase());
+    } else {
+        console.log('invalid');
+    }
+};
 
-let size: Metric = 'in';
+greet(undefined);
 
-// size can be only 'cm' or 'in'
