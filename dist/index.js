@@ -1,11 +1,6 @@
 "use strict";
-// optional element access operator
-const find = (id) => {
-    return id === 0 ? null : { birthDate: new Date() };
-};
-const customer = find(1);
-console.log(customer?.birthDate.toLocaleTimeString());
-// optional call operator
-let log = null;
-log?.('a');
+let phoneInput = document.querySelector('.phone');
+let nameInput = document.querySelector('.name');
+console.log(phoneInput.value);
+console.log(nameInput.value);
 //# sourceMappingURL=index.js.map
