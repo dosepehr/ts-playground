@@ -1,7 +1,12 @@
-const enum Size {
-    Small = 's',
-    Medium = 'm',
-    Large = 'l',
-}
+/*
+- make an argument optional
+- giving an argument default value
+*/
+const calculateTax = (income = 10, taxYear?: number): number => {
+    if (taxYear) {
+        return income * 1.2;
+    }
+    return income * 1.3;
+};
 
-const mySize: Size = Size.Large;
+calculateTax(1, 2);
