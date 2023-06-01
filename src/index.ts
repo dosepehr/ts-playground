@@ -1,12 +1,18 @@
-// sending null or undefined to functions
+// optional element access operator
 
-const greet = (name: string | null | undefined) => {
-    if (name) {
-        console.log(name.toLowerCase());
-    } else {
-        console.log('invalid');
-    }
+type Customer = {
+    birthDate: Date;
 };
 
-greet(undefined);
+const find = (id: number): Customer | null => {
+    return id === 0 ? null : { birthDate: new Date() };
+};
 
+const customer = find(1);
+console.log(customer?.birthDate.toLocaleTimeString());
+
+// optional call operator
+
+let log: any = null;
+
+log?.('a');
