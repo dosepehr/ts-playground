@@ -1,7 +1,4 @@
-const setCssProperty = (
-    width: `${number}em` | `${number}px` | `${number}rem`
-): string => {
-    return width;
-};
+let test: unknown = 'sepehr';
 
-console.log(setCssProperty('12rem'));
+// let username = <string>test;
+let username = test as string;

@@ -1,6 +1,5 @@
 "use strict";
-const setCssProperty = (width) => {
-    return width;
-};
-console.log(setCssProperty('12rem'));
+let test = 'sepehr';
+// let username = <string>test;
+let username = test;
 //# sourceMappingURL=index.js.map
