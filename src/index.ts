@@ -1,5 +1,7 @@
-let phoneInput = document.querySelector('.phone') as HTMLInputElement;
-let nameInput = <HTMLInputElement>document.querySelector('.name');
+const setCssProperty = (
+    width: `${number}em` | `${number}px` | `${number}rem`
+): string => {
+    return width;
+};
 
-console.log(phoneInput.value);
-console.log(nameInput.value);
+console.log(setCssProperty('12rem'));
