@@ -1,11 +1,19 @@
-// how to debug
-// 1 - uncomment sourcemap in tsconfig
-// 2 - create launch.json
-// 3 - add preLaunchTask in launch.json
-let age: number = 30;
-
-if (age < 50) {
-    age += 10;
-}
-
-
+// ts tuple
+let tuple: [number, number, number, string] = [1, 2, 3, 's'];
+// ts array
+let arr: (number | string)[] = [1, 2, 3, 's'];
+// ts obj
+let obj: {
+    name: string;
+    age: number;
+    walk: (canWalk: boolean) => string;
+} = {
+    name: 'sepehr',
+    age: 20,
+    walk: function (canWalk: boolean) {
+        if (canWalk) {
+            return `${this.name} can walk`;
+        }
+        return `${this.name} can't walk`;
+    },
+};

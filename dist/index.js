@@ -1,10 +1,17 @@
 "use strict";
-// how to debug
-// 1 - uncomment sourcemap in tsconfig
-// 2 - create launch.json
-// 3 - add preLaunchTask in launch.json
-let age = 30;
-if (age < 50) {
-    age += 10;
-}
+// ts tuple
+let tuple = [1, 2, 3, 's'];
+// ts array
+let arr = [1, 2, 3, 's'];
+// ts obj
+let obj = {
+    name: 'sepehr',
+    age: 20,
+    walk: function (canWalk) {
+        if (canWalk) {
+            return `${this.name} can walk`;
+        }
+        return `${this.name} can't walk`;
+    },
+};
 //# sourceMappingURL=index.js.map
