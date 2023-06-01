@@ -1,12 +1,14 @@
 /*
-- make an argument optional
-- giving an argument default value
+- make a property optional
+- make a property readonly
 */
-const calculateTax = (income = 10, taxYear?: number): number => {
-    if (taxYear) {
-        return income * 1.2;
-    }
-    return income * 1.3;
-};
 
-calculateTax(1, 2);
+const obj: {
+    readonly id: number;
+    name: string;
+    age?: number;
+} = {
+    id: 1,
+    name: 'sepehr',
+    // age: 21,
+};

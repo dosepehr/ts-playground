@@ -1,13 +1,11 @@
 "use strict";
 /*
-- make an argument optional
-- giving an argument default value
+- make a property optional
+- make a property readonly
 */
-const calculateTax = (income = 10, taxYear) => {
-    if (taxYear) {
-        return income * 1.2;
-    }
-    return income * 1.3;
+const obj = {
+    id: 1,
+    name: 'sepehr',
+    // age: 21,
 };
-calculateTax(1, 2);
 //# sourceMappingURL=index.js.map
