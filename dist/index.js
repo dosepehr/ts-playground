@@ -22,6 +22,9 @@ class Person {
     set setEmail(email) {
         this.email = email;
     }
+    static score() {
+        console.log('score');
+    }
 }
 class Student extends Person {
     avg;
@@ -42,4 +45,5 @@ console.log(sepehr.getEmail);
 // setter
 sepehr.setEmail = 'dosepehr@gmail.com';
 console.log(sepehr.getEmail);
+Person.score();
 //# sourceMappingURL=index.js.map

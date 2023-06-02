@@ -19,6 +19,9 @@ class Person {
     set setEmail(email: string) {
         this.email = email;
     }
+    static score() {
+        console.log('score');
+    }
 }
 
 class Student extends Person {
@@ -42,3 +45,8 @@ console.log(sepehr.getEmail);
 // setter
 sepehr.setEmail = 'dosepehr@gmail.com';
 console.log(sepehr.getEmail);
+
+
+
+
+Person.score()
