@@ -16,6 +16,12 @@ class Person {
         this.email = email;
         this.age = age;
     }
+    get getEmail() {
+        return this.email;
+    }
+    set setEmail(email) {
+        this.email = email;
+    }
 }
 class Student extends Person {
     avg;
@@ -31,5 +37,9 @@ class Student extends Person {
 const sepehr = new Person('sepehr', 'sepehr@gmail.com', 21);
 const vahid = new Student(19.53, 'vahid', 'vahid@gmail.com', 30);
 vahid.setAge(59);
-console.log(vahid);
+// getter
+console.log(sepehr.getEmail);
+// setter
+sepehr.setEmail = 'dosepehr@gmail.com';
+console.log(sepehr.getEmail);
 //# sourceMappingURL=index.js.map

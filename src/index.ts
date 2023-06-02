@@ -6,12 +6,18 @@
 class Person {
     constructor(
         public name: string,
-        protected email: string,
+        private email: string,
         protected age: number
     ) {
         this.name = name;
         this.email = email;
         this.age = age;
+    }
+    get getEmail() {
+        return this.email;
+    }
+    set setEmail(email: string) {
+        this.email = email;
     }
 }
 
@@ -30,4 +36,9 @@ const vahid = new Student(19.53, 'vahid', 'vahid@gmail.com', 30);
 
 vahid.setAge(59);
 
-console.log(vahid);
+// getter
+console.log(sepehr.getEmail);
+
+// setter
+sepehr.setEmail = 'dosepehr@gmail.com';
+console.log(sepehr.getEmail);
