@@ -1,11 +1,26 @@
-const nums = [1, 2] as const;
+class Person {
+    name: string;
+    email: string;
+    age: number;
+    constructor(name: string, email: string, age: number) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
+}
 
-let obj: { readonly name: string } = <const>{ name: 'sepehr' };
+class Student extends Person {
+    avg: number;
+    constructor(avg: number, name: string, email: string, age: number) {
+        super(name, email, age);
+        this.avg = avg;
+    }
+}
 
-// nums.push(12) --> error
+const sepehr = new Person('sepehr', 'sepehr@gmail.com', 21);
 
-const sum = (num1: number, num2: number): number => {
-    return num1 + num2;
-};
+const ali: Person = { name: 'ali', email: 'ali@gmail.com', age: 20 };
 
-sum(...nums); // if we remove (as const) in line 1, we get error
+const persons: Person[] = [sepehr, ali];
+
+const vahid = new Student(19.53, 'vahid', 'vahid@gmail.com', 30);

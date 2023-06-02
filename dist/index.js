@@ -1,9 +1,23 @@
 "use strict";
-const nums = [1, 2];
-let obj = { name: 'sepehr' };
-// nums.push(12) --> error
-const sum = (num1, num2) => {
-    return num1 + num2;
-};
-sum(...nums); // if we remove (as const) in line 1, we get error
+class Person {
+    name;
+    email;
+    age;
+    constructor(name, email, age) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
+}
+class Student extends Person {
+    avg;
+    constructor(avg, name, email, age) {
+        super(name, email, age);
+        this.avg = avg;
+    }
+}
+const sepehr = new Person('sepehr', 'sepehr@gmail.com', 21);
+const ali = { name: 'ali', email: 'ali@gmail.com', age: 20 };
+const persons = [sepehr, ali];
+const vahid = new Student(19.53, 'vahid', 'vahid@gmail.com', 30);
 //# sourceMappingURL=index.js.map
