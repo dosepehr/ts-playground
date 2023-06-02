@@ -4,10 +4,11 @@
 // 3- protected --> value is only accessable in class block and its sub classes
 // 4- readonly --> could not be changed
 class Person {
-    public name: string;
-    protected email: string;
-    age: number;
-    constructor(name: string, email: string, age: number) {
+    constructor(
+        public name: string,
+        protected email: string,
+        protected age: number
+    ) {
         this.name = name;
         this.email = email;
         this.age = age;
@@ -15,8 +16,7 @@ class Person {
 }
 
 class Student extends Person {
-    avg: number;
-    constructor(avg: number, name: string, email: string, age: number) {
+    constructor(public avg: number, name: string, email: string, age: number) {
         super(name, email, age);
         this.avg = avg;
     }

@@ -12,12 +12,16 @@ class Person {
         this.name = name;
         this.email = email;
         this.age = age;
+        this.name = name;
+        this.email = email;
+        this.age = age;
     }
 }
 class Student extends Person {
     avg;
     constructor(avg, name, email, age) {
         super(name, email, age);
+        this.avg = avg;
         this.avg = avg;
     }
     setAge = (Age) => {
