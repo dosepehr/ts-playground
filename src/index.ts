@@ -1,50 +1,28 @@
-// diffrence betweemn type and interface
-// 1 - interface can be modified
-// 2 - interface can be inherited
-interface User {
+// type guards
+// 1 - in
+// 2 - typeof
+// 3 - instanceof
+type Admin = {
     name: string;
-    email?: string; //making property optional
-
-    login(): boolean;
-}
-
-interface Admin extends User {
-    deleteUser(id: number): string;
-}
-
-class Manager implements Admin {
-    constructor(public name: string, public email: string) {}
-    login(): boolean {
-        return true;
-    }
-    deleteUser(id: number): string {
-        return `${id} has been deleted`;
-    }
-}
-
-let ali: User = {
-    name: 'ali',
-    // email: 'ali@gmail.com',
-    login() {
-        if (this.name == 'sepehr') {
-            return true;
-        }
-        return false;
-    },
+    privileges: string[];
+};
+type Teacher = {
+    name: string;
+    startDate: Date;
 };
 
-const sepehr: Admin = {
+const sepehr: Admin | Teacher = {
     name: 'sepehr',
-    email: 'sepehr@gmail.com',
-    login() {
-        if (this.name == 'sepehr') {
-            return true;
-        }
-        return false;
-    },
-    deleteUser(id: number): string {
-        return `${id} has been deleted`;
-    },
+    privileges: ['1', '2', '3'],
 };
 
-const manager = new Manager('mohammad', 'mmd@gmail.com');
+const showProps = (member: Admin | Teacher) => {
+    // return member.startDate --> error
+    if ('startDate' in member) {
+        return member.startDate;
+    } else {
+        return;
+    }
+};
+
+console.log(showProps(sepehr));
