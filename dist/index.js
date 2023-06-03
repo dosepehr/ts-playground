@@ -1,17 +1,12 @@
 "use strict";
-// access modifiers
-// 1- public --> default
-// 2- public --> value is only accessable in class block
-// 3- protected --> value is only accessable in class block and its sub classes
-// 4- readonly --> could not be changed
+// refactor constructor
+// make optional property
 class Person {
     name;
     email;
     age;
+    address;
     constructor(name, email, age) {
-        this.name = name;
-        this.email = email;
-        this.age = age;
         this.name = name;
         this.email = email;
         this.age = age;
@@ -31,19 +26,14 @@ class Student extends Person {
     constructor(avg, name, email, age) {
         super(name, email, age);
         this.avg = avg;
-        this.avg = avg;
     }
     setAge = (Age) => {
         this.age = Age;
     };
 }
 const sepehr = new Person('sepehr', 'sepehr@gmail.com', 21);
+sepehr.address = 'karaj';
+console.log(sepehr);
 const vahid = new Student(19.53, 'vahid', 'vahid@gmail.com', 30);
-vahid.setAge(59);
-// getter
-console.log(sepehr.getEmail);
-// setter
-sepehr.setEmail = 'dosepehr@gmail.com';
-console.log(sepehr.getEmail);
-Person.score();
+const ali = new Person('ali', 'ksk', 20);
 //# sourceMappingURL=index.js.map
