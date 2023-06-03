@@ -8,6 +8,10 @@ interface User {
     login(): boolean;
 }
 
+interface Admin extends User {
+    deleteUser(id: number): string;
+}
+
 let ali: User = {
     name: 'ali',
     // email: 'ali@gmail.com',
@@ -19,4 +23,16 @@ let ali: User = {
     },
 };
 
-console.log(ali.login());
+const sepehr: Admin = {
+    name: 'sepehr',
+    email: 'sepehr@gmail.com',
+    login() {
+        if (this.name == 'sepehr') {
+            return true;
+        }
+        return false;
+    },
+    deleteUser(id: number): string {
+        return `${id} has been deleted`;
+    },
+};
