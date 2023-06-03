@@ -1,4 +1,16 @@
 "use strict";
+class Manager {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+    login() {
+        return true;
+    }
+    deleteUser(id) {
+        return `${id} has been deleted`;
+    }
+}
 let ali = {
     name: 'ali',
     // email: 'ali@gmail.com',
@@ -22,4 +34,5 @@ const sepehr = {
         return `${id} has been deleted`;
     },
 };
+const manager = new Manager('mohammad', 'mmd@gmail.com');
 //# sourceMappingURL=index.js.map

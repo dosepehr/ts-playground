@@ -12,6 +12,16 @@ interface Admin extends User {
     deleteUser(id: number): string;
 }
 
+class Manager implements Admin {
+    constructor(public name: string, public email: string) {}
+    login(): boolean {
+        return true;
+    }
+    deleteUser(id: number): string {
+        return `${id} has been deleted`;
+    }
+}
+
 let ali: User = {
     name: 'ali',
     // email: 'ali@gmail.com',
@@ -36,3 +46,5 @@ const sepehr: Admin = {
         return `${id} has been deleted`;
     },
 };
+
+const manager = new Manager('mohammad', 'mmd@gmail.com');
