@@ -2,10 +2,6 @@
 // refactor constructor
 // make optional property
 class Person {
-    name;
-    email;
-    age;
-    address;
     constructor(name, email, age) {
         this.name = name;
         this.email = email;
@@ -22,18 +18,18 @@ class Person {
     }
 }
 class Student extends Person {
-    avg;
     constructor(avg, name, email, age) {
         super(name, email, age);
         this.avg = avg;
+        this.setAge = (Age) => {
+            this.age = Age;
+        };
     }
-    setAge = (Age) => {
-        this.age = Age;
-    };
+    get getEmail() {
+        return this.name;
+    }
 }
 const sepehr = new Person('sepehr', 'sepehr@gmail.com', 21);
 sepehr.address = 'karaj';
-console.log(sepehr);
 const vahid = new Student(19.53, 'vahid', 'vahid@gmail.com', 30);
-const ali = new Person('ali', 'ksk', 20);
 //# sourceMappingURL=index.js.map

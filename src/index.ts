@@ -25,12 +25,14 @@ class Student extends Person {
     setAge = (Age: number): void => {
         this.age = Age;
     };
+    override get getEmail() {
+        return this.name;
+    }
 }
 
 const sepehr = new Person('sepehr', 'sepehr@gmail.com', 21);
-sepehr.address = 'karaj';
-console.log(sepehr);
-
+sepehr.address='karaj'
 const vahid = new Student(19.53, 'vahid', 'vahid@gmail.com', 30);
 
-const ali = new Person('ali', 'ksk', 20);
+
+
